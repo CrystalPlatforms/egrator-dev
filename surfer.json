@@ -1,8 +1,8 @@
 {
-  "name": "Zen Browser",
-  "vendor": "Zen OSS Team",
-  "appId": "zen",
-  "binaryName": "zen",
+  "name": "EgraTor",
+  "vendor": "EgraTor",
+  "appId": "egrator",
+  "binaryName": "egrator",
   "version": {
     "product": "firefox",
     "version": "156.0",
@@ -16,9 +16,9 @@
   "brands": {
     "release": {
       "backgroundColor": "#282A33",
-      "brandShorterName": "Zen",
-      "brandShortName": "Zen",
-      "brandFullName": "Zen Browser",
+      "brandShorterName": "EgraTor",
+      "brandShortName": "EgraTor",
+      "brandFullName": "EgraTor",
       "release": {
         "displayVersion": "1.22.2b",
         "github": {
@@ -36,9 +36,9 @@
     },
     "twilight": {
       "backgroundColor": "#282A33",
-      "brandShorterName": "Zen",
-      "brandShortName": "Twilight",
-      "brandFullName": "Zen Twilight",
+      "brandShorterName": "EgraTor",
+      "brandShortName": "EgraTor",
+      "brandFullName": "EgraTor",
       "release": {
         "displayVersion": "1.23t",
         "github": {

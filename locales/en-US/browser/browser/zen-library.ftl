@@ -9,7 +9,7 @@ zen-library-button =
 library-footer-close-button =
     .tooltiptext = Close library
 library-footer-donate-button =
-    .tooltiptext = Donate to Zen
+    .tooltiptext = Donate to EgraTor
 
 library-history-section-title = History
 library-downloads-section-title = Downloads
@@ -46,7 +46,7 @@ library-downloads-menu-open =
 library-downloads-menu-copy =
     .label = Copy { $name }
 library-downloads-menu-hide =
-    .label = Hide from Zen
+    .label = Hide from EgraTor
 library-downloads-menu-trash =
     .label = Move to Trash
 library-downloads-opening-in = { PLATFORM() ->

@@ -1,0 +1,75 @@
+/*
+ * EgraTor - uproszczenia i plynnosc
+ * Ciecia z menu + widoczne animacje in/out.
+ */
+
+/* ===== 1) Dropdown "+": bez "New Split" ===== */
+#zenCreateNewPopup menuitem[data-l10n-id="zen-panel-ui-new-empty-split"] {
+  display: none !important;
+}
+
+/* ===== 2) Menu 3-kropek spacji: bez Reorder/Unload/Create ===== */
+#zenWorkspaceMoreActions #context_zenReorderWorkspaces,
+#zenWorkspaceMoreActions #context_zenUnloadWorkspace,
+#zenWorkspaceMoreActions #context_zenUnloadAllOtherWorkspace,
+#zenWorkspaceMoreActions menuitem[data-l10n-id="zen-panel-ui-workspaces-create"],
+#zenWorkspaceMoreActions menuseparator {
+  display: none !important;
+}
+
+/* ===== 3) Menu kontekstowe karty: tylko to, co wazne ===== */
+#tabContextMenu #context_reloadSelectedTabs,
+#tabContextMenu #context_duplicateTab,
+#tabContextMenu #context_duplicateTabs,
+#tabContextMenu #context_bookmarkSelectedTabs,
+#tabContextMenu #context_bookmarkTab,
+#tabContextMenu #context_selectAllTabs,
+#tabContextMenu #context_closeTabOptions,
+#tabContextMenu #context_moveTabOptions,
+#tabContextMenu #context_reopenInContainer,
+#tabContextMenu menuseparator {
+  display: none !important;
+}
+
+/* ===== 4) PLYNNOSC: menu (selektory potomne - lapia pozycje w kazdym kontenerze) ===== */
+@keyframes egratorMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+menupopup menu,
+menupopup menuitem,
+menupopup menuseparator {
+  animation: egratorMenuIn 250ms cubic-bezier(0.16, 1, 0.3, 1) both !important;
+}
+
+/* ===== 5) PLYNNOSC: panele arrow (zakladki, pobierane pliki, rozszerzenia) ===== */
+panel {
+  animation: egratorMenuIn 220ms cubic-bezier(0.16, 1, 0.3, 1) both !important;
+}
+
+/* ===== 6) PLYNNOSC: karty (fade + wsuniecie przy otwarciu) ===== */
+.tabbrowser-tab:not([fadein]) {
+  opacity: 0 !important;
+  transform: translateY(10px) !important;
+}
+
+.tabbrowser-tab[fadein] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition:
+    opacity 220ms ease-out !important,
+    transform 220ms ease-out !important;
+}
+
+/* ===== 7) PLYNNOSC: sidebar Zen ===== */
+#zen-browser-sidebar > * {
+  transition: opacity 220ms ease-out !important;
+}
+

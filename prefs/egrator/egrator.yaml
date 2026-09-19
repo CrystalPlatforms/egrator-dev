@@ -1,0 +1,121 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL-2.0 was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# EgraTor: prywatnosc (agresywna) + wydajnosc (agresywna)
+# Zasada telemetrii: jedyne co moze wyplynac, to Glean baseline "app_open".
+# Uwaga: aktywne karty (media/praca) nie sa usypiane - unload tylko pod
+# presja pamieci, a Firefox i tak omija karty z dzwiekiem/media/PIP/WebRTC.
+
+# === EgraTor: przegladarka ignoruje systemowy tryb reduced-motion
+# (Windows "Efekty animacji" wylaczone nie wylacza animacji UI przegladarki)
+- name: ui.prefersReducedMotion
+  value: 0
+  locked: true
+
+# === Telemetria: tylko app_open (Glean baseline) ===
+- name: datareporting.glean.uploadEnabled
+  value: true
+  locked: true
+
+- name: toolkit.telemetry.modulesPing.enabled
+  value: false
+  locked: true
+
+- name: browser.newtabpage.activity-stream.feeds.telemetry
+  value: false
+  locked: true
+
+- name: browser.newtabpage.activity-stream.telemetry
+  value: false
+  locked: true
+
+- name: browser.ping-centre.telemetry
+  value: false
+  locked: true
+
+- name: tool.coverage.enabled
+  value: false
+  locked: true
+
+# === Mozilla services: wylaczone ===
+- name: extensions.pocket.enabled
+  value: false
+  locked: true
+
+- name: extensions.htmlaboutaddons.recommendations.enabled
+  value: false
+  locked: true
+
+- name: browser.newtabpage.activity-stream.showSponsored
+  value: false
+  locked: true
+
+- name: browser.newtabpage.activity-stream.showSponsoredTopSites
+  value: false
+  locked: true
+
+- name: browser.urlbar.quicksuggest.dataCollection.enabled
+  value: false
+  locked: true
+
+- name: browser.urlbar.suggest.quicksuggest
+  value: false
+  locked: true
+
+- name: browser.urlbar.suggest.quicksuggest.nonsponsored
+  value: false
+  locked: true
+
+- name: browser.urlbar.suggest.sponsored
+  value: false
+  locked: true
+
+# === Prywatnosc: twarde, ale uzywane ===
+- name: browser.contentblocking.category
+  value: "strict"
+
+- name: privacy.fingerprintingProtection
+  value: true
+  locked: true
+
+- name: privacy.fingerprintingProtection.overrides
+  value: "+AllTargets,-CSSPrefersColorScheme,-JSDateTimeUTC"
+  locked: true
+
+- name: network.prefetch-next
+  value: false
+  locked: true
+
+- name: browser.send_pings
+  value: false
+  locked: true
+
+- name: browser.safebrowsing.downloads.remote.enabled
+  value: false
+  locked: true
+
+- name: media.peerconnection.ice.default_address_only
+  value: true
+  locked: true
+
+# === Wydajnosc: agresywna, bez usypiania aktywnych kart ===
+- name: browser.tabs.unloadOnLowMemory
+  value: true
+  locked: true
+
+- name: browser.cache.memory.capacity
+  value: 262144
+  locked: true
+
+- name: media.memory_caches_combined_limit_kb
+  value: 262144
+  locked: true
+
+- name: browser.sessionstore.interval
+  value: 30000
+  locked: true
+
+- name: browser.shell.checkDefaultBrowser
+  value: false
+  locked: true

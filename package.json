@@ -7,9 +7,12 @@
   },
   "type": "module",
   "scripts": {
-    "build": "surfer build",
+    "dev": "scripts\\dev.cmd",
+    "css": "scripts\\dev.cmd css",
+    "craft": "scripts\\dev.cmd craft",
+    "build": "scripts\\dev.cmd build",
     "build:ui": "surfer build --ui",
-    "start": "cd engine && python3 ./mach run --noprofile",
+    "start": "scripts\\dev.cmd run",
     "start:bloat": "XPCOM_MEM_BLOAT_LOG=1 npm start",
     "import": "npm run ffprefs && npm run import:dumps && surfer import",
     "import:dumps": "python3 scripts/update_service_dumps.py",
@@ -57,5 +60,8 @@
     "typescript": "^5.9.3"
   },
   "notes(private)": "We don't want to publish to npm, so this is marked as private",
-  "private": true
+  "private": true,
+  "allowScripts": {
+    "sharp@0.32.6": true
+  }
 }

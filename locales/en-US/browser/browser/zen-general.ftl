@@ -13,11 +13,11 @@ tab-context-zen-reset-pinned-tab =
         }
     .accesskey = R
 tab-context-zen-add-essential =
-    .label = Add to Essentials
+    .label = Add to Favourites
     .accesskey = E
 tab-context-zen-add-essential-badge = { $num } / { $max }
 tab-context-zen-remove-essential =
-    .label = Remove from Essentials
+    .label = Remove from Favourites
     .accesskey = R
 tab-context-zen-edit-pinned-page =
     .label =
@@ -97,7 +97,7 @@ zen-generic-manage = Manage
 zen-generic-more = More
 zen-generic-next = Next
 
-zen-essentials-promo-label = Add to Essentials
+zen-essentials-promo-label = Add to Favourites
 zen-essentials-promo-sublabel = Keep your favorite tabs just a click away
 
 # These labels will be used for the site data panel settings
@@ -159,7 +159,7 @@ zen-sidebar-notification-restart-safe-mode-tooltip =
     .title = Restart in Safe Mode
 
 zen-window-sync-migration-dialog-title = Keep Your Windows in Sync
-zen-window-sync-migration-dialog-message = Zen now syncs windows on the same device, so changes in one window are reflected across the others instantly.
+zen-window-sync-migration-dialog-message = EgraTor now syncs windows on the same device, so changes in one window are reflected across the others instantly.
 zen-window-sync-migration-dialog-learn-more = Learn More
 zen-window-sync-migration-dialog-accept = Got It
 
